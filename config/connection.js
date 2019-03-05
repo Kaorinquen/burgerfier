@@ -25,7 +25,12 @@ connection.connect(function (err) {
     console.log("connected as id " + connection.threadId);
 });
 
-app.get("/", function(req, res){});
+app.get("/index", function(req, res){
+    var response = req.body;
+
+    res.render("index", resonse);
+
+});
 
 app.post("/", function(req, res){
 
